@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Akshat</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: 'Segoe Script', cursive;
+      color: black;
+      text-align: center;
+      padding: 50px;
+    }
+    .box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      display: inline-block;
+      margin-top: 30px;
+    }
+    input, button {
+      padding: 12px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      width: 250px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    button {
+      background-color: hotpink;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #wish {
+      display: none;
+      margin-top: 30px;
+      background-color: #ffe6f0;
+      padding: 25px;
+      border-radius: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 From Suhana Cutu to Akshat Baby 💖</h1>
+
+  <div class="box">
+    <p>Enter your name:</p>
+    <input type="text" id="name">
+
+    <p>Enter Suhana's Birthday (dd-mm-yyyy):</p>
+    <input type="text" id="bday">
+
+    <p>When did you first meet Suhana? (dd-mm-yyyy):</p>
+    <input type="text" id="meet">
+
+    <br>
+    <button onclick="showWish()">See Your Birthday Surprise</button>
+
+    <div id="wish">
+      <h2>🎂 Happy Birthday Akshat Cutie 🎂</h2>
+      <p>You’re the light that brightens every smile,</p>
+      <p>The reason behind warm moments and happy memories. 💫</p>
+      <p>May your birthday be as lovely as your heart,</p>
+      <p>From your forever — Suhana Cuto 💕</p>
+    </div>
+  </div>
+
+  <script>
+    function showWish() {
+      const name = document.getElementById("name").value.trim().toLowerCase();
+      const bday = document.getElementById("bday").value.trim();
+      const meet = document.getElementById("meet").value.trim();
+
+      if (name === "akshat" && bday === "02-11-2008" && meet === "28-10-2024") {
+        document.getElementById("wish").style.display = "block";
+      } else {
+        alert("Please check that:\n- Your name is 'Akshat'\n- Suhana's birthday is '02-11-2011'\n- You first met her on '28-10-2024'");
+      }
+    }
+  </script>
+
+</body>
+</html>
